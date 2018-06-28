@@ -1,0 +1,19 @@
+{
+  "name": "purchase-verifier",
+  "productName": "Purchase Verifier",
+  "version": "1.0.0",
+  "description": "Verify purchase code using Envato API.",
+  "repository": "ravibpate/purchase-verifier",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "electron-settings": "*",
+    "electron-context-menu": "0.10.0"
+  },
+  "devDependencies": {
+    "electron": "*"
+  }
+}

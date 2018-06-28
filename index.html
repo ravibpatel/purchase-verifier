@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Purchase Verifier - Tool for Envato Market Authors</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Scripts -->
+  <script>
+    delete module.exports
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="./window.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+  <div id="container" class="container-fluid">
+    <!-- Person Token Title row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Personal Token</h3>
+      </div>
+    </div>
+
+    <!-- Input Personal Token row -->
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <input type="password" id="input-personal-token" class="form-control text-input" placeholder="Enter personal token you got from https://build.envato.com"></input>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+        <button type="button" id="button-save" class="form-control btn btn-primary" placeholder="Verify">Save</button>
+      </div>
+    </div>
+    
+    <!-- Purchase Code Title row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Purchase Code</h3>
+      </div>
+    </div>
+    <!-- Input Purchase Code row -->
+    <div class="row">
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <input type="text" id="input-purchase-code" class="form-control text-input" placeholder="Enter purchase code you want to verify"></input>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+        <button type="button" id="button-verify" class="form-control btn btn-primary" placeholder="Verify">Verify</button>
+      </div>
+    </div>
+
+    <!-- Item row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Item</h3>
+        <pre id="output-item" class="output"> </pre>
+      </div>
+    </div>
+
+    <!-- Buyer row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Buyer</h3>
+        <pre id="output-buyer" class="output"> </pre>
+      </div>
+    </div>
+
+    <!-- Date Purchased row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Date Purchased</h3>
+        <pre id="output-date-purchased" class="output"> </pre>
+      </div>
+    </div>
+
+    <!-- Support Entitlement row -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="heading">Support Entitlement</h3>
+        <pre id="output-support-entitlement" class="output"> </pre>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
