@@ -1,19 +1,23 @@
 {
   "name": "purchase-verifier",
   "productName": "Purchase Verifier",
-  "version": "1.0.0",
-  "description": "Verify purchase code using Envato API.",
-  "repository": "ravibpate/purchase-verifier",
-  "main": "app.js",
+  "version": "2.0.0",
+  "description": "Verify Purchase Code using Envato API.",
+  "main": "main.js",
   "scripts": {
-    "start": "electron app.js"
+    "start": "electron ."
   },
+  "repository": "https://github.com/ravibpatel/purchase-verifier",
+  "author": "ravibpatel",
   "license": "MIT",
   "dependencies": {
-    "electron-settings": "*",
-    "electron-context-menu": "0.10.0"
+    "bulma": "^0.7.5",
+    "electron-settings": "^3.2.0",
+    "toastr": "^2.1.4",
+    "jquery": "3.4.1",
+    "electron-context-menu": "0.12.1"
   },
   "devDependencies": {
-    "electron": "*"
+    "electron": "^5.0.4"
   }
 }

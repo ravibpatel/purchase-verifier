@@ -1,92 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
   <title>Purchase Verifier - Tool for Envato Market Authors</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./styles.css">
-
-  <!-- Scripts -->
-  <script>
-    delete module.exports
-  </script>
-  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="./window.js" charset="utf-8"></script>
-
 </head>
-
 <body>
-  <div id="container" class="container-fluid">
-    <!-- Person Token Title row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Personal Token</h3>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Purchase Verifier</h1>
+      <h2 class="subtitle">
+       Enter <strong>Purchase Code</strong> you want to verify and click Verify button.
+      </h2>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" type="text" id="purchase-code" placeholder="Verify Purchase Code">
+        </p>
+        <p class="control">
+          <a class="button is-info" id="verify">
+            Verify
+          </a>
+          <a class="button is-link" id="settings">Settings</a>
+        </p>
       </div>
+      
+      <table class="table" id="info">
+          <tr>
+            <td>Item</td>
+            <td id="item">SMS Gateway</td>
+          </tr>
+          <tr>
+            <td>Buyer</td>
+            <td id="buyer">rbsoft</td>
+          </tr>
+          <tr>
+            <td>Sold At</td>
+            <td id="sold-at">5/30/2019</td>
+          </tr>
+          <tr>
+            <td>Support Entitlement</td>
+            <td id="support-entitlement">159 Days Remaining</td>
+          </tr>
+        </table>
     </div>
-
-    <!-- Input Personal Token row -->
-    <div class="row">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-        <input type="password" id="input-personal-token" class="form-control text-input" placeholder="Enter personal token you got from https://build.envato.com"></input>
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
-        <button type="button" id="button-save" class="form-control btn btn-primary" placeholder="Verify">Save</button>
-      </div>
-    </div>
-    
-    <!-- Purchase Code Title row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Purchase Code</h3>
-      </div>
-    </div>
-    <!-- Input Purchase Code row -->
-    <div class="row">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-        <input type="text" id="input-purchase-code" class="form-control text-input" placeholder="Enter purchase code you want to verify"></input>
-      </div>
-      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
-        <button type="button" id="button-verify" class="form-control btn btn-primary" placeholder="Verify">Verify</button>
-      </div>
-    </div>
-
-    <!-- Item row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Item</h3>
-        <pre id="output-item" class="output"> </pre>
-      </div>
-    </div>
-
-    <!-- Buyer row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Buyer</h3>
-        <pre id="output-buyer" class="output"> </pre>
-      </div>
-    </div>
-
-    <!-- Date Purchased row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Date Purchased</h3>
-        <pre id="output-date-purchased" class="output"> </pre>
-      </div>
-    </div>
-
-    <!-- Support Entitlement row -->
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h3 class="heading">Support Entitlement</h3>
-        <pre id="output-support-entitlement" class="output"> </pre>
-      </div>
-    </div>
-
-  </div>
+  </section>
+  <!-- You can also require other files to run in this process -->
+  <script src="./index.js"></script>
 </body>
-
 </html>
