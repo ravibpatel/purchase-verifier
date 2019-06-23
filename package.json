@@ -5,7 +5,85 @@
   "description": "Verify Purchase Code using Envato API.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build",
+    "pack-win": "build --dir --win",
+    "dist-win": "build --win"
+  },
+  "build": {
+    "appId": "org.rbsoft.purchaseverifier",
+    "productName": "Purchase Verifier",
+    "copyright": "Copyright © 2018-2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": "dmg"
+    },
+    "dmg": {
+      "iconSize": 128,
+      "contents": [
+        {
+          "x": 155,
+          "y": 208
+        },
+        {
+          "x": 385,
+          "y": 208,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "artifactName": "purchase-verifier-setup.${ext}"
+    },
+    "linux": {
+      "category": "Utility",
+      "synopsis": "Verify Envato Purchase Code using Envato API.",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64",
+            "ia32",
+            "armv7l",
+            "arm64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "artifactName": "purchase-verifier-${arch}.${ext}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true,
+      "license": "LICENSE",
+      "artifactName": "purchase-verifier-setup.${ext}"
+    }
   },
   "repository": "https://github.com/ravibpatel/purchase-verifier",
   "author": "ravibpatel",
@@ -18,6 +96,7 @@
     "electron-context-menu": "0.12.1"
   },
   "devDependencies": {
-    "electron": "^5.0.4"
+    "electron": "^5.0.4",
+    "electron-builder": "^20.44.4"
   }
 }

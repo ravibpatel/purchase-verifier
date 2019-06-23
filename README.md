@@ -9,6 +9,7 @@ Simple [Electron](https://electron.atom.io) application using [Envato API](https
 - `cd purchase-verifier`
 - `npm install` to install the application's dependencies
 - `npm start` to start the application
+- `npm run dist` to build the installer for the application
 
 ## Change API Key
 
